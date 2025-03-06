@@ -24,8 +24,5 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
     },
-    env: {
-      'jest/globals': true
-    },
   },
 )
