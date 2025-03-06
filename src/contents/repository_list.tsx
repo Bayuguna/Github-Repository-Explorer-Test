@@ -59,7 +59,7 @@ const RepositoryPage = () => {
               }}
             />
             <div className="flex flex-col items-center py-3">
-              <div className=" flex w-full justify-center text-xl text-gray-600 gap-2">
+              <div className=" flex w-full justify-center text-sm lg:text-xl text-gray-600 gap-2">
                 Showing results for:
                 <span className="font-semibold text-black"> "{query}"</span>
               </div>
@@ -173,10 +173,12 @@ const RepositoryPage = () => {
                   className="w-[200px] h-[200px]"
                 />
                 <div className="flex flex-col items-center py-3">
-                  <span className="text-xl font-semibold">
+                  <span className="text-base lg:text-xl font-semibold text-center">
                     Sorry your search did not match any repositories.
                   </span>
-                  <span>Please try again.</span>
+                  <span className="text-sm lg:text-base">
+                    Please try again.
+                  </span>
                 </div>
               </div>
             )}

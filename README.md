@@ -4,9 +4,9 @@ This repository using React + Typescript + Vite and Styling using [Tailwindcss v
 
 # Whats In Project
 
-- Include search [github api repository](https://docs.github.com/en/rest?apiVersion=2022-11-28).
+- Include search repository with [github api repository](https://docs.github.com/en/rest?apiVersion=2022-11-28).
 - Using unit test [vitest](https://vitest.dev/) for testing web application.
-- Using [atomic design](https://medium.com/@makersinstitute/penerapan-atomic-design-pada-environment-react-c6c50eaf1b66) for better UI development.
+- Using [Atomic Design](https://medium.com/@makersinstitute/penerapan-atomic-design-pada-environment-react-c6c50eaf1b66) for better UI/UX development.
 - Responsive UI using [Tailwindcss](https://tailwindcss.com/docs/installation/using-vite) for better user experience.
 
 # How to Run It
@@ -24,6 +24,8 @@ Clone this repository using git "git clone <REPOSITORY_URL>"
 
   //Run the project
   npm run dev
+  //or
+  npm run build
 
   //Run testing
   npm test
