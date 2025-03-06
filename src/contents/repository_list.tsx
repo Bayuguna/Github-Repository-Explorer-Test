@@ -88,9 +88,16 @@ const RepositoryPage = () => {
                           <div className="flex flex-col space-y-2 bg-black text-white p-4 rounded-lg relative">
                             <div className="flex flex-col space-y-2">
                               <div className="flex justify-between">
-                                <span className="text-xl font-semibold">
-                                  {rep.name}
-                                </span>
+                                <div className="flex gap-1 items-center">
+                                  <span className="text-xl font-semibold">
+                                    {LimitCharacter(rep.name, 35)}
+                                  </span>
+                                  <div className="px-2 bg-muted-foreground rounded-full">
+                                    <span className="text-[10px]">
+                                      {rep.language}
+                                    </span>
+                                  </div>
+                                </div>
                                 <div className="flex gap-1 items-center text-sm">
                                   <span>{rep.score}</span>
                                   <FaStar className="w-3 h-3" />
