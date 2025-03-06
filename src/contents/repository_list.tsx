@@ -89,7 +89,7 @@ const RepositoryPage = () => {
                             <div className="flex flex-col space-y-2">
                               <div className="flex justify-between">
                                 <div className="flex gap-1 items-center">
-                                  <span className="text-xl font-semibold">
+                                  <span className="text-sm lg:text-xl font-semibold">
                                     {LimitCharacter(rep.name, 35)}
                                   </span>
                                   <div className="px-2 bg-muted-foreground rounded-full">
@@ -104,7 +104,7 @@ const RepositoryPage = () => {
                                 </div>
                               </div>
                               <div>
-                                <span className="text-xs">
+                                <span className="text-[10px] lg:text-xs">
                                   {LimitCharacter(rep.description, 100)}
                                 </span>
                               </div>
@@ -119,7 +119,7 @@ const RepositoryPage = () => {
                               </span>
                             </div>
 
-                            <div className="flex justify-between text-sm pt-2">
+                            <div className="flex justify-between text-xs lg:text-sm pt-2 items-center">
                               <div className="flex items-center space-x-4">
                                 <span className="text-sm flex items-center gap-1">
                                   <b>{rep.watchersCount || 0}</b> Views
