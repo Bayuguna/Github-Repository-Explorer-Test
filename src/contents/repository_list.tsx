@@ -87,7 +87,7 @@ const RepositoryPage = () => {
                         {git.repositories.map((rep) => (
                           <div className="flex flex-col space-y-2 bg-black text-white p-4 rounded-lg relative">
                             <div className="flex flex-col space-y-2">
-                              <div className="flex justify-between">
+                              <div className="flex justify-between gap-2">
                                 <div className="flex gap-1 items-center">
                                   <span className="text-sm lg:text-xl font-semibold">
                                     {LimitCharacter(rep.name, 35)}
