@@ -13,20 +13,33 @@ This repository using React + Typescript + Vite and Styling using [Tailwindcss v
 
 Clone this repository using git "git clone <REPOSITORY_URL>"
 
-```js
-  // First of all install the dependecy module
-  npm install
+First Step.
 
-  // Create .env file in root folder
+```js
+  //Install the dependecy module
+  npm install
+```
+
+Create .env file in root folder and copy this setting.
+
+```js
+  // .env
   VITE_APP_NAME="Github Repository Explorer"
   VITE_APP_VERSION=1.0.0
   VITE_GITHUB_API_URL=https://api.github.com
+```
 
-  //Run the project
+Run the project using npm or yarn.
+
+```js
   npm run dev
   //or
   npm run build
+```
 
+Run testing.
+
+```js
   //Run testing
   npm test
 ```
