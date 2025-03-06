@@ -1,19 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import LandingPage from "./contents/landing";
-import RepositoryPage from "./contents/repository_list";
+import MenuRepositoryList from "./contents/menu/menu_repository_list";
+import MainLayout from "./contents/layout/main_layout";
+import Routing from "./utils/constanta/page_route";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/repository" element={<RepositoryPage />} />
+        <Route element={<MainLayout />}>
+          <Route path={Routing.DEFAULT} element={<LandingPage />} />
+          <Route path={Routing.REPOSITORY} element={<MenuRepositoryList />} />
+        </Route>
       </Routes>
     </>
   );

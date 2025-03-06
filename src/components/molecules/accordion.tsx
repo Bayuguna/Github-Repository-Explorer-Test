@@ -7,7 +7,7 @@ import {
 
 interface BAccordionProps {
   data: {
-    title: string;
+    title: any;
     content: any;
   }[];
 }
@@ -15,7 +15,7 @@ interface BAccordionProps {
 const BAccordion = (props: BAccordionProps) => {
   const { data = [] } = props;
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="multiple" className="w-full">
       {data.map((item, index) => (
         <AccordionItem value={"accordion-" + index} key={index}>
           <AccordionTrigger>{item.title}</AccordionTrigger>

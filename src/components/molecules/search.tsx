@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { div } from "motion/react-client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 interface BSearchProps {
@@ -16,6 +15,21 @@ const BSearch = (props: BSearchProps) => {
   const { placeholder = "Search" } = props;
   const [search, setSearch] = useState<string>(props.value || "");
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const listener = (event: KeyboardEvent) => {
+      if (event.code === "Enter" || event.code === "NumpadEnter") {
+        event.preventDefault();
+        // callMyFunction();
+        if (search) props.onClick && props.onClick(search as any);
+        !search ? setError("Type something to search ") : setError(null);
+      }
+    };
+    document.addEventListener("keydown", listener);
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  }, [search]);
   return (
     <div className="relative">
       <div className="flex w-full items-center space-x-2">
