@@ -17,6 +17,11 @@ Clone this repository using git "git clone <REPOSITORY_URL>"
   // First of all install the dependecy module
   npm install
 
+  // Create .env file in root folder
+  VITE_APP_NAME="Github Repository Explorer"
+  VITE_APP_VERSION=1.0.0
+  VITE_GITHUB_API_URL=https://api.github.com
+
   //Run the project
   npm run dev
 

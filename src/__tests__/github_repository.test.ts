@@ -51,6 +51,7 @@ describe("GithubRepository", () => {
       status: 200, // Required for AxiosResponse
       statusText: "OK", // Required for AxiosResponse
       headers: {}, // Required for AxiosResponse
+      config: {}, // Required for AxiosResponse
     };
 
     mockApiClient.get.mockResolvedValue(mockResponse);
